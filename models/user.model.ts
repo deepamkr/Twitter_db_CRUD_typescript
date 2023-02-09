@@ -31,6 +31,8 @@ module.exports = (sequelize:any, DataTypes:any) =>  {
     username!: string;
     // followers!: Number;
     // followings!: Number;
+
+    
     // static associate({Post}) {
     //   // define association here
     //   this.hasMany(Post,{foreignKey:'userId',as:'posts'})
