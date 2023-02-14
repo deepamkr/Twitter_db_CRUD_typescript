@@ -4,7 +4,7 @@ module.exports={
         const {userUuid,tweet}=req.body
     
         try{
-            const user =await db.User.findOne({Where:{uuid:userUuid}})
+            const user =await db.User.findOne({Where:{id:userUuid}})
             
             const post= await db.Post.create({tweet,userId:user.id})
             return res.json(post)

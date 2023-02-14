@@ -13,11 +13,14 @@ app.use('/api/read',require('./routes/read'))
 app.use('/api/update',require('./routes/update'))
 app.use('/api/delete',require('./routes/delete'))
 
+//for login
+app.use('/api/login',require('./routes/login'))
+
 //for posts
 app.use('/api/post',require('./routes/create_post'))
 app.use('/api/getpost',require('./routes/get_all_post'))
 
-db.sequelize.sync().then(()=>{
+db.sequelize.sync({force:false,alter:true}).then(()=>{
     app.listen(port,()=>{
 
         console.log(`App listening on port ${port}`)

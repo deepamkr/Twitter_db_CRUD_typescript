@@ -7,6 +7,6 @@ import db from '../models'
 
 //create user
 router.use(express.json())
-//console.log("IN create.ts routes")
+
 router.post('/',controller.post)
 module.exports= router

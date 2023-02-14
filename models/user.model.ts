@@ -1,5 +1,5 @@
 'use strict';
-import { stringify } from 'querystring';
+//import { stringify } from 'querystring';
 import {
   DataType,
   Model, UUIDV4
@@ -11,6 +11,7 @@ interface UserAttributes{
   email: string;
   name: string;
   username: string;
+  password: string;
   // followers: Number;
   // followings: Number;
 }
@@ -29,6 +30,7 @@ module.exports = (sequelize:any, DataTypes:any) =>  {
     email!: string;
     name!: string;
     username!: string;
+    password!: string;
     // followers!: Number;
     // followings!: Number;
 
@@ -77,6 +79,10 @@ module.exports = (sequelize:any, DataTypes:any) =>  {
         notNull: { msg : 'Username must have a email'},
         notEmpty: { msg : 'username must not be empty'}
       }
+    },
+    password:{
+      type: DataTypes.STRING,
+      allowNull: true
     }
     //,
     // followers:{
