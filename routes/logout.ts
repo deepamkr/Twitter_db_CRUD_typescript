@@ -1,6 +1,6 @@
 import express from 'express'
 const router =express.Router()
-const controller =require('../controllers/create_post_controller')
+const controller =require('../controllers/logout_controller')
 import {verifyToken} from '../middleware/verifyToken'
 
 //create post for a user using the uuid

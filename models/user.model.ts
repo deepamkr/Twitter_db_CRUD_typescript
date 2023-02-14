@@ -46,6 +46,9 @@ module.exports = (sequelize:any, DataTypes:any) =>  {
     static associate(models:any) {
       this.hasMany(models.Post, { foreignKey: 'userId', as: 'posts' });
     }
+    toJSON(){
+      return { ...this.get(),password:undefined}
+    }
     
   }
   User.init({

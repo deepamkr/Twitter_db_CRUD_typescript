@@ -1,10 +1,10 @@
 import express from 'express'
 const router =express.Router()
 const controller =require('../controllers/get_all_post_controller')
-const path=require('path')
-
-
+import {verifyToken} from '../middleware/verifyToken'
 
 //GET ALL post from table
-router.get('/',controller.get)
+
+
+router.get('/',verifyToken,controller.get)
 module.exports= router

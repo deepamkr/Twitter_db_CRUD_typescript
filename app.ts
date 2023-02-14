@@ -16,6 +16,9 @@ app.use('/api/delete',require('./routes/delete'))
 //for login
 app.use('/api/login',require('./routes/login'))
 
+//for logout
+//app.use('/api/logout',require('./routes/logout'))
+
 //for posts
 app.use('/api/post',require('./routes/create_post'))
 app.use('/api/getpost',require('./routes/get_all_post'))
