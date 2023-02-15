@@ -9,7 +9,7 @@ module.exports={
         
         try{
             const user =await db.User.create({email,name,username,password})
-            jwt.sign({user},secretKey,{expiresIn:'300s'},(err:any,token:any)=>{
+            jwt.sign({user},secretKey,{expiresIn:'600s'},(err:any,token:any)=>{
                 res.status(200).json({ msg: 'Suceccfully login', user,token })
                // res.json({token})
              })

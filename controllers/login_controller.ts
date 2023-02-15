@@ -13,7 +13,7 @@ module.exports={
         }
         console.log(user.email)
         if(user.password === password){
-               jwt.sign({user},process.env.secretKey,{expiresIn:'300s'},(err:any,token:any)=>{
+               jwt.sign({user},process.env.secretKey,{expiresIn:'600s'},(err:any,token:any)=>{
                res.status(200).json({ msg: 'Suceccfully login', userid:user.id,token })
               // res.json({token})
             })
